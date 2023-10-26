@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Size containment</title>
+    </head>
+    <body>
+        <div class="size-container">
+            <div class="bigger">Something inside the container</div>
+        </div>             
+    </body>
+</html>
+
+<style>
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .bigger {
+        height: 200px;
+    }
+
+    .size-container {
+        container: image-container / inline-size; 
+    }
+
+</style>

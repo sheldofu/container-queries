@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Griddy site</title>
+    </head>
+    <body>
+        <div class="main-grid">
+            <article id="top">
+                <div class="image-component">
+                    <img src="./picture.jpg" />
+                    <div><p>All shapes and sizes welcome with Container queries</p></div>
+                </div>
+            </article>
+            <article id="side">
+                <div class="image-component">
+                    <img src="./picture.jpg" />
+                    <div><p>All shapes and sizes welcome with Container queries</p></div>
+                </div>
+            </article>
+            <article id="long">
+                <div class="image-component">
+                    <img src="./picture.jpg" />
+                    <div><p>All shapes and sizes welcome with Container queries</p></div>
+                </div>
+            </article>
+            <article id="two">
+                <div class="image-component">
+                    <img src="./picture.jpg" />
+                    <div><p>All shapes and sizes welcome with Container queries</p></div>
+                </div>
+            </article>
+            <article id="square">
+                <div class="image-component">
+                    <img src="./picture.jpg" />
+                    <div><p>All shapes and sizes welcome with Container queries</p></div>
+                </div>               
+            </article>
+        </div>
+    </body>
+</html>
+
+
+
+<style>
+
+html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    * {
+        box-sizing: inherit;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    article {
+        container: test / size;
+    }
+
+    .image-component {
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+
+    .image-component div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    @container test (orientation: portrait) {
+        .image-component {
+            flex-direction: column;
+        }
+    }
+
+    .main-grid {
+        display: grid;
+        height: 100%;
+        width: 100%;
+        grid-template-areas: 
+        "top top top top"
+        "side long long long"
+        "side two square square"
+        "side two square square";
+        grid-template-rows: 25% 25% 25% 25%;
+    }
+
+    #top {
+        grid-area: top;
+        background-color: crimson;
+    }
+
+    #side {
+        grid-area: side;
+        background-color: lightsteelblue
+    }
+
+    #long {
+        grid-area: long;
+        background-color: violet;
+    }
+
+    #two {
+        grid-area: two;
+        background-color: wheat;
+    }
+
+    #square {
+        grid-area: square;
+        background-color: blue
+    }
+
+
+</style>
